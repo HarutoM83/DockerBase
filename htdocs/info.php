@@ -1,3 +1,3 @@
 <?php
-mhpinfo();
+phpinfo();
 ?>
