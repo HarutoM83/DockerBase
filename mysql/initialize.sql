@@ -155,3 +155,8 @@ left outer join users u on b.user_id = u.id where result_win = true
 ) as tmp
 group by level_map
 ;
+
+
+DROP DATABASE IF EXISTS palyer_db;
+CREATE DATABASE IF NOT EXISTS palyer_db;
+
