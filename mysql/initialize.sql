@@ -173,7 +173,7 @@ CREATE TABLE IF NOT EXISTS user_desks (
     user_id INT,
     deck_id INT,
     user_card_id INT
-);
+)
 
 DROP TABLE IF EXISTS user_cards;
 CREATE TABLE IF NOT EXISTS user_cards(
@@ -218,5 +218,5 @@ CREATE TABLE IF NOT EXISTS gacha_history(
     history_id INT,
     gacha_id INT,
     item_id INT
-)
+);
 
