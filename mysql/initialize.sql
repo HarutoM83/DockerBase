@@ -162,14 +162,61 @@ CREATE DATABASE IF NOT EXISTS main_db;
 
 use main_db;
 
-CREATE TABLE user_desk (
+DROP TABLE IF EXISTS user;
+CREATE TABLE IF NOT EXISTS user(
+    id INT,
+    name VARCHAR(255)
+)
+
+DROP TABLE IF EXISTS user_desks;
+CREATE TABLE IF NOT EXISTS user_desks (
     user_id INT,
     deck_id INT,
     user_card_id INT
 );
 
-CREATE TABLE user_cards(
+DROP TABLE IF EXISTS user_cards;
+CREATE TABLE IF NOT EXISTS user_cards(
     id INT,
     user_id INT,
-    
+    cards_id INT
 )
+
+DROP TABLE IF EXISTS user_characters;
+CREATE TABLE IF NOT EXISTS user_characters(
+    user_id INT,
+    character_id INT,
+    level INT
+)
+
+DROP TABLE IF EXISTS cards;
+CREATE TABLE IF NOT EXISTS cards(
+    id INT,
+    name VARCHAR(255),
+    character_id INT,
+    hp INT,
+    atk INT,
+    def INT
+)
+
+DROP TABLE IF EXISTS items;
+CREATE TABLE IF NOT EXISTS items(
+    item_id INT,
+    item_name VARCHAR(255)
+)
+
+DROP TABLE IF EXISTS gacha_items;
+CREATE TABLE IF NOT EXISTS gacha_items(
+    gacha__id INT,
+    item_id INT,
+    weight INT
+)
+
+DROP TABLE IF EXISTS gacha_history;
+CREATE TABLE IF NOT EXISTS gacha_history(
+    id INT,
+    history_id INT,
+    gacha_id INT,
+    item_id INT
+)
+
