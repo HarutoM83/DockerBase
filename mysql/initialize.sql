@@ -157,6 +157,19 @@ group by level_map
 ;
 
 
-DROP DATABASE IF EXISTS palyer_db;
-CREATE DATABASE IF NOT EXISTS palyer_db;
+DROP DATABASE IF EXISTS main_db;
+CREATE DATABASE IF NOT EXISTS main_db;
 
+use main_db;
+
+CREATE TABLE user_desk (
+    user_id INT,
+    deck_id INT,
+    user_card_id INT
+);
+
+CREATE TABLE user_cards(
+    id INT,
+    user_id INT,
+    
+)
